@@ -1,0 +1,121 @@
+.header, footer {
+  background-color: #24292e;
+  padding: 5px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: hsla(0,0%,100%,.7);
+  text-align: center;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  padding: 30px;
+}
+
+.searchForm {
+   text-align: center;
+} 
+
+.usersContainer {
+  margin: 0 auto;
+}
+
+.userCard {
+  margin: 20px auto;
+  display: flex;
+  max-width: 700px;
+  -webkit-align-items: top;
+          align-items: top;
+  -webkit-box-shadow: 1px 1px 17px 0px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow:    1px 1px 17px 0px rgba(50, 50, 50, 0.5);
+  box-shadow:         1px 1px 17px 0px rgba(50, 50, 50, 0.5);
+}
+
+.logo {
+  position: absolute;
+  top: 7px;
+  width: 60px;
+  margin: auto;
+}
+
+.searchForm {
+  margin: auto;
+}
+
+.avatar {
+  width: 150px;
+}
+
+.logo img, .avatar img {
+  width: 100%;
+}
+
+.userData {
+  width: 60%;
+  padding: 10px;
+}
+
+.gitPage {
+  font-weight: bold;
+}
+
+.userData>span {
+  margin: 10px;
+  display: block;
+  font-weight: bold;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.contacts {
+    display: inline-block;
+  }
+
+.contacts>div {
+    position: relative;
+}
+
+.locationLogo, .mailLogo, .blogLogo {
+  position: absolute;
+  width: 20px;
+  display: inline-block;
+  margin-right: 5px;
+  top: -1px;
+}
+
+.locationText, .mailText, .blogText {
+  position: relative;
+  left: 25px;
+}
+
+@media (max-width: 500px) {
+  .logo {
+  position: relative;
+  margin: auto;
+  }
+
+  .userCard {
+  margin: 20px auto;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  max-width: 220px;
+  }
+
+  .avatar {
+    margin: auto;
+    width: 100px;
+  }
+
+  .userData {
+    margin: auto;
+  }
+ 
+}
