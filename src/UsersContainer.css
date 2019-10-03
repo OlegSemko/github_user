@@ -15,6 +15,7 @@ footer {
 
 .main {
   padding: 30px;
+  min-height: 73.8vh;
 }
 
 .usersContainer {
