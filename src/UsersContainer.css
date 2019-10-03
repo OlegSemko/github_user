@@ -1,4 +1,4 @@
-.header, footer {
+.header, footer, .searchForm {
   background-color: #24292e;
   padding: 5px;
   font-size: 14px;
@@ -15,11 +15,8 @@ footer {
 
 .main {
   padding: 30px;
+  min-height: 69.9vh;
 }
-
-.searchForm {
-   text-align: center;
-} 
 
 .usersContainer {
   margin: 0 auto;

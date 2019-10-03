@@ -27,7 +27,6 @@ class UsersContainer extends Component {
 
   handleSubmit(event) {
     this.state.users.length = 0;
-    console.log(this.state.inputValue);
     this.fetchUsers();
     event.preventDefault();
   }
@@ -36,11 +35,9 @@ class UsersContainer extends Component {
     const rawUsers = await fetch(`https://api.github.com/search/users?q=location:${this.state.inputValue}&sort=score&order=desc`);
     const users = await rawUsers.json();
     this.setState({totalCount: users.total_count <= 10 ? users.total_count : 10});
-    console.log(users);
     for (let i = 0; i < (this.state.totalCount); i++) {
       const rawUser = await fetch(`https://api.github.com/users/${users.items[i].login}`);
       const user = await rawUser.json();
-      console.log(user);
       this.usersArr.push(user);
     }
      this.setState({users: this.usersArr});
@@ -52,7 +49,7 @@ class UsersContainer extends Component {
       <div className="searchForm">
         <form onSubmit={this.handleSubmit}>
           <label>
-            location:
+            location: 
             <input type="text" value={this.state.inputValue} onChange={this.handleChange} />
           </label>
           <input type="submit" value="Submit" />
@@ -80,7 +77,7 @@ class UsersContainer extends Component {
               <div className="mailLogo">
                 <img src={mail} alt="mail logo"/>
               </div>
-              <span className="mailText">{el.mail ? <a href={`mailto:${el.email}`}>e-Mail</a> : "not avialable"}</span>
+              <span className="mailText">{el.mail ? <a href={`mailto:${el.email}`}>e-Mail</a> : "private"}</span>
             </div>
             <div>
               
