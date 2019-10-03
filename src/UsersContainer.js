@@ -78,7 +78,7 @@ class UsersContainer extends Component {
               <div className="mailLogo">
                 <img src={mail} alt="mail logo"/>
               </div>
-              <span className="mailText">{el.mail ? <a href={`mailto:${el.email}`}>e-Mail</a> : "not avialable"}</span>
+              <span className="mailText">{el.mail ? <a href={`mailto:${el.email}`}>e-Mail</a> : "private"}</span>
             </div>
             <div>
               
