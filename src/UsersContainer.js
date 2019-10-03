@@ -35,6 +35,7 @@ class UsersContainer extends Component {
     const rawUsers = await fetch(`https://api.github.com/search/users?q=location:${this.state.inputValue}&sort=score&order=desc`);
     const users = await rawUsers.json();
     this.setState({totalCount: users.total_count <= 10 ? users.total_count : 10});
+    
     for (let i = 0; i < (this.state.totalCount); i++) {
       const rawUser = await fetch(`https://api.github.com/users/${users.items[i].login}`);
       const user = await rawUser.json();
