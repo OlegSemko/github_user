@@ -35,7 +35,7 @@ class UsersContainer extends Component {
     const rawUsers = await fetch(`https://api.github.com/search/users?q=location:${this.state.inputValue}&sort=score&order=desc`);
     const users = await rawUsers.json();
     this.setState({totalCount: users.total_count <= 10 ? users.total_count : 10});
-    
+
     for (let i = 0; i < (this.state.totalCount); i++) {
       const rawUser = await fetch(`https://api.github.com/users/${users.items[i].login}`);
       const user = await rawUser.json();
@@ -50,12 +50,12 @@ class UsersContainer extends Component {
       <div className="searchForm">
         <form onSubmit={this.handleSubmit}>
           <label>
-            location: 
-            <input type="text" value={this.state.inputValue} onChange={this.handleChange} />
+            <input type="text" placeholder="location" value={this.state.inputValue} onChange={this.handleChange} />
           </label>
           <input type="submit" value="Submit" />
         </form>
       </div>
+      <div className="main">
       <div className="usersContainer">{this.state.users.map((el) => 
         <div key={el.id} className="userCard">
           <div className="avatar">
@@ -90,6 +90,7 @@ class UsersContainer extends Component {
             </div>
           </div>
           </div>)}
+        </div>
         </div>
       </div>
     );

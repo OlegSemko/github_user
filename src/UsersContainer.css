@@ -2,7 +2,7 @@
   background-color: #24292e;
   padding: 5px;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 0.2;
   color: hsla(0,0%,100%,.7);
   text-align: center;
 }
@@ -15,7 +15,7 @@ footer {
 
 .main {
   padding: 30px;
-  min-height: 69.9vh;
+  min-height: 71.4vh;
 }
 
 .usersContainer {
@@ -36,12 +36,14 @@ footer {
 .logo {
   position: absolute;
   top: 7px;
-  width: 60px;
+  left: 5%;
+  width: 70px;
   margin: auto;
 }
 
 .searchForm {
   margin: auto;
+  padding-bottom: 20px;
 }
 
 .avatar {
@@ -96,6 +98,7 @@ footer {
   .logo {
   position: relative;
   margin: auto;
+  left: 0;
   }
 
   .userCard {
@@ -113,6 +116,14 @@ footer {
 
   .userData {
     margin: auto;
+  }
+
+  .header {
+    line-height: 1;
+  }
+
+  .main {
+    min-height: 57.9vh;
   }
  
 }

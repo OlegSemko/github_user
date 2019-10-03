@@ -24,7 +24,7 @@ class App extends Component {
           </div>
           <h1>GitHub Top 10 Users</h1>
         </div>
-        <div className="main">
+        <div>
           {this.state.hasError ?
             <div>
               <h2>Вибачте, сталася помилка!</h2> 
